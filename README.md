@@ -1,7 +1,6 @@
 # comfyui 节点开发 code test
 
-按照要求提交适配 ComfyUI-Easy-Use 节点的 Pull Request 到本仓库
-https://github.com/yolain/ComfyUI-Easy-Use
+按照要求提交适配 ComfyUI-Easy-Use 节点（https://github.com/yolain/ComfyUI-Easy-Use）的 Pull Request 到本仓库
 
 
 ## 背景知识
@@ -16,12 +15,13 @@ https://docs.comfy.org/essentials/custom_node_server_overview
 ## 基本原理
 公司内挂载了一块大共享盘，把 custom node 需要的模型，依赖等数据提交下载到里面了。
 这样启动新节点时不用再下载，提升了启动速度，降低了存储成本。
+comfyui主仓库：https://github.com/liblib-co-work/ComfyUI
 
-为了实现这一目标，一般来讲需要修改以下几个地方：
+为了实现这一目标，一般来讲需要修改comfyui主仓库和节点仓库代码的几个地方：
 1. 修改 custom node 原代码，通过调用公司封装到 comfyUI 里的函数来从共享盘加载模型/依赖，不用额外下载
    ```python
    
-       def get_juicefs_endpoint():
+    def get_juicefs_endpoint():
         """获取juicefs endpoint"""
         return "/ComfyUI/std-models"
     def get_juicefs_path(file_path):
@@ -40,11 +40,11 @@ https://docs.comfy.org/essentials/custom_node_server_overview
         return model_path
  
   ```
-3. 修改 comfyUI 的配置（主要关注 configs/node_fields.py 中的 PULID_FLUX_MAPPINGS 和 NODE_FILE_FIELDS 两处修改即可）
+2. 修改 comfyUI 的配置（主要关注 configs/node_fields.py 中的 PULID_FLUX_MAPPINGS 和 NODE_FILE_FIELDS 两处修改即可）
 <img width="807" alt="image" src="https://github.com/user-attachments/assets/71ee6ced-0f64-47fd-8a9b-04b4e9d86044">
 <img width="460" alt="image" src="https://github.com/user-attachments/assets/ab03c303-a841-4932-9c92-886d0b287b68">
 
-4. 如果源 node 需要从 github 下载代码，需要参考如下方式将代码提前下载好，并注释掉 requirement.txt 中对应的逻辑，改为 -e 从本地安装
+3. 如果源 node 需要从 github 下载代码，需要参考如下方式将代码提前下载好，并注释掉 requirement.txt 中对应的逻辑，改为 -e 从本地安装
   <img width="735" alt="image" src="https://github.com/user-attachments/assets/0837bc5e-1918-4703-bb7a-fe5870349b69">
 
 
