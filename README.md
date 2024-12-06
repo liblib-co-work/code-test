@@ -1,7 +1,6 @@
 # comfyui 节点开发 code test
-
-按照要求提交适配 ComfyUI-Easy-Use 节点（ https://github.com/yolain/ComfyUI-Easy-Use ）的 Pull Request 到本仓库
-
+[ComfyUI.zip](https://github.com/user-attachments/files/18035909/ComfyUI.zip)
+按照要求在ComfyUI.zip工程中适配 ComfyUI-Easy-Use 节点（ https://github.com/yolain/ComfyUI-Easy-Use ）
 
 ## 背景知识
 
