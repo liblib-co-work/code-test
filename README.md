@@ -41,15 +41,17 @@ comfyui主仓库：https://github.com/liblib-co-work/ComfyUI
  
    ```
 调用example（下图1间接调用，2直接调用了）：
-![image](https://github.com/user-attachments/assets/0bd6997a-74e3-4c53-b079-8d10f5a91b2e)
-![image](https://github.com/user-attachments/assets/b6f77037-1cc6-4414-abc3-ed86cd91b32d)
+      ![image](https://github.com/user-attachments/assets/0bd6997a-74e3-4c53-b079-8d10f5a91b2e)
+      图1
+      ![image](https://github.com/user-attachments/assets/b6f77037-1cc6-4414-abc3-ed86cd91b32d)
+      图2
 
 
 2. 修改 comfyUI 的配置（主要关注 configs/node_fields.py 中的 PULID_FLUX_MAPPINGS 和 NODE_FILE_FIELDS 两处修改即可）
-![image](https://github.com/user-attachments/assets/71ee6ced-0f64-47fd-8a9b-04b4e9d86044)
-![image](https://github.com/user-attachments/assets/ab03c303-a841-4932-9c92-886d0b287b68)
+      ![image](https://github.com/user-attachments/assets/71ee6ced-0f64-47fd-8a9b-04b4e9d86044)
+      ![image](https://github.com/user-attachments/assets/ab03c303-a841-4932-9c92-886d0b287b68)
 
 3. 如果源 node 需要从 github 下载代码，需要参考如下方式将代码提前下载好，并注释掉 requirement.txt 中对应的逻辑，改为 -e 从本地安装
-![image](https://github.com/user-attachments/assets/0837bc5e-1918-4703-bb7a-fe5870349b69)
+      ![image](https://github.com/user-attachments/assets/0837bc5e-1918-4703-bb7a-fe5870349b69)
 
 
