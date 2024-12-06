@@ -40,9 +40,13 @@ comfyui主仓库：https://github.com/liblib-co-work/ComfyUI
  
    ```
 调用example（下图1间接调用，2直接调用了）：
+
      图1：
+     
      <img width="500" alt="image" src="https://github.com/user-attachments/assets/0bd6997a-74e3-4c53-b079-8d10f5a91b2e">
+     
      图2：
+     
      <img width="500" alt="image" src="https://github.com/user-attachments/assets/b6f77037-1cc6-4414-abc3-ed86cd91b32d">
 
 
