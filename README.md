@@ -45,6 +45,6 @@ comfyui主仓库：https://github.com/liblib-co-work/ComfyUI
 <img width="460" alt="image" src="https://github.com/user-attachments/assets/ab03c303-a841-4932-9c92-886d0b287b68">
 
 3. 如果源 node 需要从 github 下载代码，需要参考如下方式将代码提前下载好，并注释掉 requirement.txt 中对应的逻辑，改为 -e 从本地安装
-  <img width="735" alt="image" src="https://github.com/user-attachments/assets/0837bc5e-1918-4703-bb7a-fe5870349b69">
+<img width="735" alt="image" src="https://github.com/user-attachments/assets/0837bc5e-1918-4703-bb7a-fe5870349b69">
 
 
